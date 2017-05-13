@@ -1,0 +1,30 @@
+---
+layout: default
+images:
+  - image_path: /images/1.JPG
+    title: Apple Pie
+  - image_path: /images/2.JPG
+    title: Birthday Cake
+  - image_path: /images/3.JPG
+    title: Black Forest
+  - image_path: /images/4.JPG
+    title: Brownie
+  - image_path: /images/DSC_0004.jpg
+    title: Cheese Cake
+  - image_path: /images/6.JPG
+    title: Chocolate Cake
+  - image_path: /images/7.JPG
+---
+
+
+
+<div class="container text-center">
+  <h3>Pixel Collection</h3>
+  <br>
+  <div class="row">
+         {% for image in page.images %}
+    <div class="col-sm-4"> <img src="{{ image.image_path }}" class="img-responsive" style="width:100%" alt="{{ image.title}}"> </div>
+         {% endfor %}
+     
+  </div>
+</div>
